@@ -1,0 +1,12 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.myTableStyle {
+  vertical-align: middle;
+  align: middle;
+}

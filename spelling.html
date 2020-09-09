@@ -1,0 +1,142 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="spell.css">
+  <script src="spell.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    var easy2circle = "alone angel been child coin crow eaten gate hobby jot keys outfit promise quilt scoot shaky talking thirst ton who";
+    var avg2circle =
+      "album aloud babbled balloonist beach bought breath brook charming common connect copper drafts draggy edge famous flurry froze glaze grabbed group heavy honest icicle joined lemon lose mare necklace only pennies point pretend rainbow rumor series sixth soap staring stump tatters towel trail warn whichever";
+    var hard2circle = "accident cabbage collect explode garbage instinct jersey lonely mailbox nonsense penmanship saluting scribble southern swaddle";
+
+    var easy2uncircle = "agree always among ankle arrow awake awful bacon barked beast blade blaze bloom body bold booth brother candle carpet cent center chart chew crop curly doing each ease eggs enjoy family fare feelings fever finger first force fray freeze garden glue greed ground heel hiking homesick hour jumped jungle kisses kitten lion loves march mumble nature noun ours parent pencil pint plates please prize prove pudding punch repeat round rude scoop second seemed shooting shudder smog smoke smooth sound spoon steer takes tape tiger toast trash trim trust waiting wedding winning work worst zebra";
+
+    var avg2uncircle = "acme acre alarm angle angry animal apartment area badge baggy barefoot barley baseball basing before between birch blocking blunt borrow bowl brakes branches briskly brought cable cattail children choice choose chuckle circus classic claws closely comic conflict cookies copy crave crayon crew crick crust curry dampen daze delay delta drew dribble duet dusky eagle earn elect enter extra fable faraway fence fetch fiery final flame flare fleet flinch foaming foe freezing frisky fudge gallery garb gauze glare globe gluing goodness grain grasp greedy greenish grind harmful haul having herd history hostel indeed keen knob lawn lazy leanness lessons level liar living lying mainly marched master matter misplace moist neat neon nothing order outside owe owner palace panel panther parcel perhaps pickles pictures planet pouch prank pulse pushed rabbits ranches razor rebound resort retire ribbon right rinsed royal scared selling shadow shady shrugged sickle site slice slight spice squash squawk stalk stocking stolen stormed stumble tackle taping taught teeth touch tracks tribe tried tunnel ugly unfold western wheel wherever wiring wisdom wisest worker";
+
+    var hard2uncircle = "abound adept antarctic appealed arctic arena atoll awhile beechnut blabber calcium captain carnival choking cloudburst compose concoction control countries couple creation crutches degree education eighth envy evasive flavorful forgetful future getaway global gloom gorge gracefully helium housefly improve infant inform injure innermost invoice issued label lantern laugh locate locomotive marrow massive member mercy misery misgiving musical nautical opera passage patriot peacekeeper persist painly prey priceless product project protection recover relic relied remainder render repent reporter restrain result review romance sandwich scribe secrecy siren slippers spasm standard stint supply suspect thunderous tonight tropics urgent verdict visor vowel weather wheelbarrow wheeze witty worldwide zinnia";
+
+    var easy5circle =
+      "awesome breezeway broach chosen constant cough deadline devil discuss dried easel evenness flaming groggy immune lilac magma millimeter muscle oceans prisoner religion repress search shovel smuggled teenagers thieves unstable whether";
+
+    var avg5circle =
+      "acceptable adhesion armadillo assail associate awkwardness beggar burglar centennial contour cousin debacle deductive dignified dozen ejector familiar fidgety graduation guitar hydrogen infielders kilowatt measurement mercury noticeable opponent peasant poignant programmable regal revving rhyming savvy sergeant signature subscriber surmount technical throughout truant unnecessary vestibule wilderness windshield";
+
+    var hard5circle =
+      "admissible brioche construed decoupage disastrous epitaph fallibility googol hierophant knavish lachrymose megalomania monoxide pageantry pikake porpoise quarantine redoubtable souffle symbolization tenebrous unconscionable velleity vinaigrette";
+
+      var easy5ucircle = "ample attention balm benefit bristles builder calves character chargeable charity cinch comedy comfort consist continual corral creature dappled debunk decorated defense deflate devote dignity dismal distance doubt dragonfly eagerness earring factory feature friendliness gingerly handiwork hinge hymn identify kindling knee locally location logical mammal media memory metal minority misstated monument normal object orphan outtalk pliers powwow progress reject releasing repose retard rupture sandpiper segment session skillful sodden strictly superior telecast throbbing tithe turnstile uniform untidy visible vision voyage whey";
+
+      var avg5uncircle = "absolve accreditation accustom actionable addax ambition ambrosia anoint artisans aspect aspic asserted assessment assurance astonishment astronaut astronomer attendance attitude audiometer authority benefactor boycott brazenness brief busily candor careen ceiling chemical chinchilla civilian cocoa compelled concave conclave confident conjecture consistent convention cosmonaut crystallize culprit deacon deceive decline dedication dependable detour ecosystem elapsed emigrate enable exercise extinguish fanfare femur fertilize feud fleecy forceps frequency furrier gaggle galling garrison geology gossip guilty headache hesitant imagination imitation impatient influx judging justify legendary lethal liquidate lobster machinery magically mansion matronly merciful microscope midafternoon motocross notify obvious oppressive orchestra overexposed paradise perchance perturb photocopy physician placid plentiful plover prescription probability punctuation pungent quagmire quester radiation reception recurring remedy retention revelation revision ritual rotates satchel scaffold schooner seafarer sectional shimmies shindig sidle skirmish sledgehammer society sought sparse stampede stellar stickle stickler stimulating stupidity summary sundae syrup tawdry telescope tension tirade tradition transfusion transmitted triumphal umpteen unbiased uncertain unemployment vertify visionary wary withered wombat";
+
+      var hard5uncircle = "acoustician adulation afghan assimilate avaricious baneberry benefic clarion clavicle collapsible covenant defamatory diffidence disburse distaff drivel dyslexia effectually enamored eutrophication expenditure financier formidable fructify fungible grotesque gurnard historical humus infrastructure irritable jaundiced laryngitis legitimacy limnology liverwurst malingerer mercantile mesosphere metrology mountebank mucilage narwhal nebulize nutritious ornament overweening pamphleteer paragon pedagogue pelerine pianism plangent platelets polarize polyphony procession promontory pseudoscience pumpernickel purloin quaver realia reneging reproduction retaliation romanticism salient sequential sublimate subterranean succinctly tetchy thesaurus thoroughly torpid transliterate travesty trigonometry usury videocassette viduity ziggurat zwieback";
+
+
+
+    var Easy2CArray = easy2circle.split(" ");
+    var Average2CArray = avg2circle.split(" ");
+    var Hard2CArray = hard2circle.split(" ");
+    var Easy2UCArray = easy2uncircle.split(" ");
+    var Average2UCArray = avg2uncircle.split(" ");
+    var Hard2UCArray = hard2uncircle.split(" ");
+
+    var Easy5CArray = easy5circle.split(" ");
+    var Average5CArray = avg5circle.split(" ");
+    var Hard5CArray = hard5circle.split(" ");
+    var Easy5UCArray = easy5ucircle.split(" ");
+    var Average5UCArray = avg5uncircle.split(" ");
+    var Hard5UCArray = hard5uncircle.split(" ");
+
+  </script>
+
+</head>
+
+<body>
+  <center>
+    <table height="100%" border="0">
+      <tr>
+        <td valign="middle">
+
+          <table class="myTableStyle" border="10" cellpadding="10">
+            <tr>
+              <td>
+                <b>Hello Speller. Welcome to Spelling Bee.</b>
+
+                <br>
+                <!--
+<form>
+  <input type="radio" name="circled" value="Circled" checked>Circled
+  <br>
+  <input type="radio" name="circled" value="Uncircled">Uncircled
+</form>
+-->
+                <div id="levelSelect" class="show">
+                  <form>
+                    <table cellpadding="2" cellspacing="10">
+                      <tr>
+                        <td>
+                          <input type="radio" name="grade" value="2" checked>2nd Grade
+                          <br>
+                          <input type="radio" name="grade" value="5">5th Grade
+                        </td>
+                        <td>
+                          <input type="radio" name="level" value="Easy" checked>Easy
+                          <br>
+                          <input type="radio" name="level" value="Average">Average
+                          <br>
+                          <input type="radio" name="level" value="Hard">Hard
+                        </td>
+                        <td>
+                          <input type="radio" name="circled" value="C" checked>Circled
+                          <br>
+                          <input type="radio" name="circled" value="UC">Uncircled
+                        </td>
+                      </tr>
+                    </table>
+                    <input type="button" value="Start Test" onclick="startTest()">
+                  </form>
+                </div>
+
+                <div id="testArea" class="hide">
+                  <h>
+                    Current Level:
+                    <label id="currentLevel"></label>
+                    <br> Total Words:
+                    <label id="totalWords"></label>
+                  </h>
+                  <br>
+                  <input type="button" value="Start New Test" onclick="startOver()">
+
+                  <br>
+                  <div id="txtEntryArea" class="show">
+                    <br><b> Please type the word here and press enter.</b>
+                    <br> Word:
+                    <label id="numCurrent"></label> of
+                    <label id="numTotal"></label>
+
+                    <!-- here's where the spller type in the word -->
+                    <input id="spellText" type="text" name="spell" onkeypress="checkSpell(event, this.value)">
+
+                    <input type="button" value="Repeat Word" onclick="speakWord(currentWord)">
+                    <br>
+                  </div>
+                  <br> Correct:
+                  <label id="numCorrect"></label>
+                  <br> Incorrect:
+                  <label id="numIncorrect"></label>
+                  <br>
+                </div>
+                <div id="historyReport" class="hide">
+
+                </div>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+</html>
